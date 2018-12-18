@@ -2,7 +2,6 @@
 #define BST_HPP
 
 #include <cmath>
-#include <error.hpp>
 #define SIZE 10000
 
 class BST{
@@ -161,7 +160,7 @@ class BST{
 					std::cout<<elemanlar[i]<<" ";
 			}
 		}
-		void Temizle(){	
+		void Delete(){	
 			for(int i=0;i<SIZE;i++) IndeksDolulugu[i] = 0;
 		}
 		~BST(){
@@ -169,4 +168,4 @@ class BST{
 		}
 };
 
-#endif
+#endif // BST_HPP

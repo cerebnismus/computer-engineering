@@ -1,6 +1,6 @@
 /**
 * @file manage.hpp
-* @description Manage Menu Configuration
+* @description Menu Statement
 * @course II. Ogretim D Grubu
 * @assignment Odev-III
 * @date 05.12.2018
@@ -17,15 +17,12 @@
 #include <iomanip> // setw etc.
 #include <exception> // throw.
 #include <iostream> // standart input/output library.
-#include <error.hpp>
+#include <implement.hpp>
 
 class Manage 
 {
 public:
-	Manage() // constructor
-	{
-		// code here
-	}
+	Manage() {} // constructor
 	void start();
 };
 
