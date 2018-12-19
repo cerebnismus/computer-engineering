@@ -12,6 +12,7 @@
 
 #include <cmath>
 #include <string>
+#include <cstring>
 #include <algorithm>
 #include <fstream> // Read & write data library.
 #include <iomanip> // setw etc.

@@ -6,9 +6,7 @@
 #include <string>
 #include <iomanip>
 #include <exception>
-
 using namespace std;
-
 int main(int argc, char * argv[])
 {
     std::ifstream myfile("sayi.txt");

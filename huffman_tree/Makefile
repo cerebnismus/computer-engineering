@@ -11,10 +11,11 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	$(CC) $(CFLAGS) $(CPPFLAGS) $(CXXFLAGS) -c -o $@ $<
 
 compile: $(OBJ_FILES)
-	$(CC) $(CFLAGS) -o ./bin/odev-3 main.cpp $^
+	$(CC) $(CFLAGS) -o ./bin/huffman_tree main.cpp $^
+	cp -f ./data/dene.txt ./bin/
 
 test:
-	cd bin; ./odev-3 ; cd -
+	cd bin; ./huffman_tree ; cd -
 
 clean:
 	rm -rf ./bin/* ./lib/*.o

@@ -6,15 +6,17 @@
 * @date 05.12.2018
 * @author Oguzhan Ince oguzhan.ince@ogr.sakarya.edu.tr
 */
+
 #ifndef IMPLEMENT_HPP
 #define IMPLEMENT_HPP
 
 #include <cmath>
-#include <BST.hpp>
 #include <string>
+#include <cstring>
 #include <iostream>
 #include <stdio.h>  /* printf, scanf, puts, NULL */
 #include <stdlib.h> /* srand, rand */
+#include <BST.hpp>
 
 class Implement
 {

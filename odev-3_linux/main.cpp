@@ -19,10 +19,11 @@ int main(int argc, char ** argv)
 
     // Implement Statements:
 	Implement i;
-	i.startBST_implement();
+	i.BST_implement();
 
     // Menu Statements:
 	Manage m;
 	m.start();
-	delete agac;
+
+	// delete agac;
 }

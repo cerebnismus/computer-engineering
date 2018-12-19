@@ -34,7 +34,7 @@ class BST{
 	public:
 		BST(){
 			elemanlar=new int[SIZE];
-			Temizle();
+			Delete();
 		}
 		void Ekle(const int& eleman){
 			int suankiIndeks = 0;
@@ -59,7 +59,7 @@ class BST{
 		}
 		void Sil(const int& eleman, int ind=0){
 			int i = Ara(eleman, ind);
-			if(i == -1) throw Error(1);
+			if(i == -1) throw __EXCEPTIONS;
 			else{
 				IndeksDolulugu[i] = 0;		
 				if(IndeksDolulugu[2*i+2] == 0)

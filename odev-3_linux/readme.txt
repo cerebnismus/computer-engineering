@@ -1,6 +1,9 @@
- *************************makefile******************************
-
-  		make clean && make all && make test
+# ReadMe
+- Binary Tree Class
+- for Data Structure Programming Project
+ 
+# Makefile
+- make clean && make all && make test
 
 
 

@@ -1,7 +1,8 @@
 #ifndef NODE1_HPP
 #define NODE1_HPP
-#include <error.hpp>
+
 #include <iostream>
+
 using namespace std;
 
 /*	if we need to change the type of items in the nodes, then
@@ -12,8 +13,6 @@ using namespace std;
 
 /*	Data - contains the data/value to be stored.
 *	Link - contains address of the next node.
-*
-*
 */
 
 class node
