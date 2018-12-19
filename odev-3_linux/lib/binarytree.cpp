@@ -6,7 +6,12 @@
 * @author Özge Öztataroglu ozge.oztataroglu@ogr.sakarya.edu.tr
 * @author Oguzhan Ince oguzhan.ince@ogr.sakarya.edu.tr
 */
+
+#include <cstddef> // definition of NULL
+#include <cassert> // for assert()
 #include <binarytree.hpp>
+#include <TreeException.hpp>
+
 
 BinaryTree::BinaryTree() : root(NULL)
 {

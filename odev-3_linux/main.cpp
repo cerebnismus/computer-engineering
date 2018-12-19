@@ -8,7 +8,8 @@
 * @author Oguzhan Ince oguzhan.ince@ogr.sakarya.edu.tr
 */
 
-#include <BST.hpp>
+#include <binarytree.hpp>
+#include <TreeException.hpp>
 #include <implement.hpp>
 #include <manage.hpp>
 #include <string>

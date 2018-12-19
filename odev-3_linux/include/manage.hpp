@@ -18,6 +18,8 @@
 #include <exception> // throw.
 #include <iostream> // standart input/output library.
 #include <implement.hpp>
+#include <binarytree.hpp>
+#include <TreeException.hpp>
 
 class Manage 
 {

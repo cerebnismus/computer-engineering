@@ -10,6 +10,8 @@
 #ifndef BINARYTREE_HPP
 #define BINARYTREE_HPP
 
+#include <cstddef> // definition of NULL
+#include <cassert> // for assert()
 #include "TreeException.hpp"
 
 typedef void (*FunctionType)(TreeItemType& anItem);

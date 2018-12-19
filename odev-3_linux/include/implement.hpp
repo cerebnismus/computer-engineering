@@ -16,7 +16,8 @@
 #include <iostream>
 #include <stdio.h>  /* printf, scanf, puts, NULL */
 #include <stdlib.h> /* srand, rand */
-#include <BST.hpp>
+#include <binarytree.hpp>
+#include <TreeException.hpp>
 
 class Implement
 {
@@ -29,7 +30,7 @@ public:
 
 	void Implement::BST_implement()
 	{ // total node pieces is must be 2^h+1
-	
+	/*
 		BST *agac = new BST();
 		BST *sub_tree = agac;
 		
@@ -45,6 +46,7 @@ public:
 		agac->Postorder();
 		std::cout<<std::endl<<"Levelorder :";
 		agac->Levelorder();
+		*/
 	}
 
 
