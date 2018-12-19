@@ -1,7 +1,21 @@
+/* @file BST.hpp
+* @description BST Functions
+* @course II. Ogretim D Grubu
+* @assignment Odev-III
+* @date 20.12.2018
+* @author Özge Öztataroglu ozge.oztataroglu@ogr.sakarya.edu.tr
+* @author Oguzhan Ince oguzhan.ince@ogr.sakarya.edu.tr
+*/
+
 #ifndef BST_HPP
 #define BST_HPP
 
+#include <string>
+#include <cstring>
+#include <string.h>
+#include <iostream>
 #include <cmath>
+
 #define SIZE 10000
 
 class BST{

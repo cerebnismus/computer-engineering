@@ -1,5 +1,4 @@
-/**
-* @file manage.hpp
+/* @file manage.hpp
 * @description Menu Statement
 * @course II. Ogretim D Grubu
 * @assignment Odev-III

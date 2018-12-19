@@ -1,9 +1,9 @@
-/**
-* @file implement.hpp
+/* @file implement.hpp
 * @description Implement Statement
 * @course II. Ogretim D Grubu
 * @assignment Odev-III
-* @date 05.12.2018
+* @date 20.12.2018
+* @author Özge Öztataroglu ozge.oztataroglu@ogr.sakarya.edu.tr
 * @author Oguzhan Ince oguzhan.ince@ogr.sakarya.edu.tr
 */
 

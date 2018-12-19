@@ -1,11 +1,13 @@
 /**
 * @file main.cpp
-* @description Driver code to test the implementation
+* @description Implementation of Binary Search Tree
 * @course II. Ogretim D Grubu
 * @assignment Odev-III
-* @date 12.12.2018
+* @date 20.12.2018
+* @author Özge Öztataroglu ozge.oztataroglu@ogr.sakarya.edu.tr
 * @author Oguzhan Ince oguzhan.ince@ogr.sakarya.edu.tr
 */
+
 #include <BST.hpp>
 #include <implement.hpp>
 #include <manage.hpp>
