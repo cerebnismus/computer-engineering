@@ -6,27 +6,33 @@
 * @date 20.12.2018
 * @author Özge Öztataroglu ozge.oztataroglu@ogr.sakarya.edu.tr
 * @author Oguzhan Ince oguzhan.ince@ogr.sakarya.edu.tr
-*/
+**/
 
-#include <binarytree.hpp>
-#include <TreeException.hpp>
-#include <implement.hpp>
 #include <manage.hpp>
-#include <string>
+#include <implement.hpp>
+#include <TreeException.hpp>
+#include <BinarySearchTree.hpp>
 
 int main(int argc, char ** argv) 
 {
-	system("clear");
-	std::cout << "Veri Yapilari - Odev III" << std::endl << std::endl;
-	std::cout << "--------[ MAIN FUNC ]--------" << std::endl;
+	system("clear"); // Terminal ekranini temizle.
 
-    // Implement Statements:
+/** 
+ * kullanıcıdan bir sayı isteyecektir. sayının basamak uzunluğu çok fazla olabilir.
+ * her basamaktaki değeri bir ağacın yüksekliği kabul edip, bu yüksekliğe gelene kadar
+ * rastgele sayılardan meydana gelen ikili arama ağaçları oluşturacaktır. Oluşan bu ağaçlar 
+ * yükseklik değerleri baz alınarak bir ikili arama ağacında tutulacaktır.
+**/
+
+    // Implement Statements from implement.hpp header file
 	Implement i;
 	i.BST_implement();
-
-    // Menu Statements:
+ 
+ 	// Daha sonra menü ekrana gelmelidir.
+    // Menu Statements from manage.hpp header file
 	Manage m;
 	m.start();
 
+	~BinarySearchTree(); // destructor function !!!
 	// delete agac;
 }

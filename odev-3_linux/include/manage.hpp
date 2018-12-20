@@ -18,13 +18,14 @@
 #include <exception> // throw.
 #include <iostream> // standart input/output library.
 #include <implement.hpp>
-#include <binarytree.hpp>
+#include <bst.hpp>
 #include <TreeException.hpp>
 
 class Manage 
 {
 public:
 	Manage() {} // constructor
+	Implement i;
 	void start();
 };
 
@@ -34,10 +35,10 @@ public:
     	while(true) 
 		{
 			/* Choose Menu */
-    		std::cout << "--------[ MANAGE MENU ]--------" << std::endl;
+    		std::cout << "--------[ MENU ]--------" << std::endl;
     		std::cout << "1 - Agaclardan Maksimum Degeri Cikar" << std::endl;
-        	std::cout << "2 - Ağaçlardan Minimum Değeri Cikar" << std::endl;
-        	std::cout << "3 - Tum Agaclari Level Order Yazdir" << std::endl;
+        	std::cout << "2 - Agaclardan Minimum Degeri Cikar" << std::endl;
+        	std::cout << "3 - Tum Agaclari Levelorder Yazdir" << std::endl;
         	std::cout << "4 - Cikis" << std::endl;
     		std::cout << "Secim: ";
     		std::cin >> choice;
@@ -46,17 +47,17 @@ public:
 			{
     			case 1:
    			    
-				//i.ShiftLeft();
+				i.agac->max_del();
 				break;
 
     			case 2:
 				
-				//i.ShiftRight();
+				i.agac->min_del();
     			break;
 
     			case 3:
     			
-				//i.OneNode();
+				i.agac->Levelorder();
     			break;
 
     			case 4:

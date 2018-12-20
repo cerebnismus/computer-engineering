@@ -1,5 +1,5 @@
 # ReadMe
-- Binary Tree Class
+- Binary Search Tree Implementation
 - for Data Structure Programming Project
  
 # Makefile

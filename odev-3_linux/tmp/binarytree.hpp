@@ -30,22 +30,14 @@ public:
 
 // binary tree operations:
    virtual bool isEmpty() const;
-   virtual TreeItemType rootData() const
-      throw(TreeException);
-   virtual void setRootData(const TreeItemType& newItem)
-      throw (TreeException);
-   virtual void attachLeft(const TreeItemType& newItem)
-      throw(TreeException);
-   virtual void attachRight(const TreeItemType& newItem)
-      throw(TreeException);
-   virtual void attachLeftSubtree(BinaryTree& leftTree)
-      throw(TreeException);
-   virtual void attachRightSubtree(BinaryTree& rightTree)
-      throw(TreeException);
-   virtual void detachLeftSubtree(BinaryTree& leftTree)
-      throw(TreeException);
-   virtual void detachRightSubtree(BinaryTree& rightTree)
-      throw(TreeException);
+   virtual TreeItemType rootData() const;
+   virtual void setRootData(const TreeItemType& newItem);
+   virtual void attachLeft(const TreeItemType& newItem);
+   virtual void attachRight(const TreeItemType& newItem);
+   virtual void attachLeftSubtree(BinaryTree& leftTree);
+   virtual void attachRightSubtree(BinaryTree& rightTree);
+   virtual void detachLeftSubtree(BinaryTree& leftTree);
+   virtual void detachRightSubtree(BinaryTree& rightTree);
    virtual BinaryTree leftSubtree() const;
    virtual BinaryTree rightSubtree() const;
    virtual void preorderTraverse(FunctionType visit);
@@ -86,7 +78,6 @@ protected:
 
 private:
    TreeNode *root; // pointer to root of tree
-}; // end class
-// End of header file.ortefore the node referenced by iter. If iter == end(),
+}; 
 
 #endif // BINARYTREE_HPP

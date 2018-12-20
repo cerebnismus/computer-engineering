@@ -16,38 +16,58 @@
 #include <iostream>
 #include <stdio.h>  /* printf, scanf, puts, NULL */
 #include <stdlib.h> /* srand, rand */
-#include <binarytree.hpp>
-#include <TreeException.hpp>
+#include "BinarySearchTree.hpp"
+#include "TreeException.hpp"
+#include "Manage.hpp"
+
 
 class Implement
 {
 private:
 	int implement;
+
 public:
-	Implement() {} // constructor
+	Implement() {} // constructor !
 	void BST_implement();
+	Manage m;
 };
 
-	void Implement::BST_implement()
-	{ // total node pieces is must be 2^h+1
-	/*
-		BST *agac = new BST();
-		BST *sub_tree = agac;
+void Implement::BST_implement()
+{
+//	BST *agac = new BST();
+//	BST *sub_tree = agac;
 		
-		std::string user_input;
-		std::cout << "values: ";
-		std::cin >> user_input;
+	std::string user_input;
+	std::cout << "Yukseklik: ";
+	std::cin >> user_input;
 
-		std::cout<<"Inorder :";
-		agac->Inorder();
-		std::cout<<std::endl<<"Preorder :";
-		agac->Preorder();
-		std::cout<<std::endl<<"Postorder :";
-		agac->Postorder();
-		std::cout<<std::endl<<"Levelorder :";
-		agac->Levelorder();
-		*/
-	}
+	BinarySearchTree<int> *agac = new BinarySearchTree<int>();
+	BinarySearchTree<int> *agac = agac;
+
+	std::cout<<std::endl<<"Levelorder :";
+	agac->Levelorder();
+		
+}
+
+template <typename Nesne>
+void max_del() 
+{
+	system("clear");
+	BinarySearchTree::agac->AraveSil(BinarySearchTree::agac->maxDeger());
+	std::cout << "[ UYARI ] Agaclardan Maksimum Deger Cikartildi." << std::endl;
+	// agac->Levelorder();
+	m.start();
+}
+
+template <typename Nesne>
+void min_del()
+{
+	system("clear");
+	BinarySearchTree::agac->AraveSil(BinarySearchTree::agac->minDeger());
+	std::cout << "[ UYARI ] Agaclardan Minimum Deger Cikartildi." << std::endl;
+	// agac->Levelorder();
+	m.start();
+}
 
 
 #endif //IMPLEMENT_HPP
