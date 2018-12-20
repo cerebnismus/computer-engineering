@@ -55,7 +55,6 @@ bool BinaryTree::isEmpty() const
 }
 
 TreeItemType BinaryTree::rootData() const
-      throw(TreeException)
 {
    if (isEmpty())
       throw TreeException("TreeException: Empty tree");
@@ -63,7 +62,6 @@ TreeItemType BinaryTree::rootData() const
 }
 
 void BinaryTree::setRootData(const TreeItemType& newItem)
-      throw(TreeException)
 {
    if (!isEmpty())
       root->item = newItem;
@@ -76,7 +74,6 @@ void BinaryTree::setRootData(const TreeItemType& newItem)
 }
 
 void BinaryTree::attachLeft(const TreeItemType& newItem)
-      throw(TreeException)
 {
    if (isEmpty())
       throw TreeException("TreeException: Empty tree");
@@ -92,7 +89,6 @@ void BinaryTree::attachLeft(const TreeItemType& newItem)
 }
 
 void BinaryTree::attachRight(const TreeItemType& newItem)
-      throw(TreeException)
 {
    if (isEmpty())
       throw TreeException("TreeException: Empty tree");
@@ -109,7 +105,6 @@ void BinaryTree::attachRight(const TreeItemType& newItem)
 } 
 
 void BinaryTree::attachLeftSubtree(BinaryTree& leftTree)
-      throw(TreeException)
 {
    if (isEmpty())
       throw TreeException("TreeException: Empty tree");
@@ -123,7 +118,6 @@ void BinaryTree::attachLeftSubtree(BinaryTree& leftTree)
 } 
 
 void BinaryTree::attachRightSubtree(BinaryTree& rightTree)
-      throw(TreeException)
 {
    if (isEmpty())
       throw TreeException("TreeException: Empty tree");
@@ -137,7 +131,6 @@ void BinaryTree::attachRightSubtree(BinaryTree& rightTree)
 } 
 
 void BinaryTree::detachLeftSubtree(BinaryTree& leftTree)
-      throw(TreeException)
 {
    if (isEmpty())
       throw TreeException("TreeException: Empty tree");
@@ -148,7 +141,6 @@ void BinaryTree::detachLeftSubtree(BinaryTree& leftTree)
 } 
 
 void BinaryTree::detachRightSubtree(BinaryTree& rightTree)
-      throw(TreeException)
 {
    if (isEmpty())
       throw TreeException("TreeException: Empty tree");
