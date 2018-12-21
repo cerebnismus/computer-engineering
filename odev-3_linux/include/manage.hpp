@@ -62,12 +62,12 @@ public:
 
     			case 4:
 				system("clear");
-				std::cout << "[ WARNING ] Program sonlandirildi." << std::endl;
+				std::cout << "[ UYARI ] Program sonlandirildi." << std::endl;
     			exit(0);
     			break;
 
     			default:
-    			std::cout << "[ WARNING ] Tekrar deneyin." << std::endl;
+    			std::cout << "[ UYARI ] Tekrar deneyin." << std::endl;
     			continue;
 	    	}
 		}

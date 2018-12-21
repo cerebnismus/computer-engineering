@@ -2,12 +2,15 @@
 #include <stdlib.h>
 #include <iomanip>
 #include <iostream>
+#include <string>
+#include "random_data.hpp"
 
 struct node
 { 
 	int data; 
 	node *left;
 	node *right; 
+	node *root;
 };
 
 class btree{
@@ -20,10 +23,10 @@ public:
 	int del_min(node *tree);
 	int del_max(node *tree);
 	void levelorder(struct node* tree);
-	void travers(node *tree)
-	node* MergeLists(node *headA, node *headB)
+	void travers(node *tree);
+	void printGivenLevel(struct node* tree, int level) 
+	node* MergeTrees(node *headA, node *headB);
 
-	node *root;
 };
 
 
@@ -32,10 +35,9 @@ btree::btree(){
 }
 
 btree::~btree(){
-	destroy_tree();
 }
 
-node* btree::add (node *tree,int x)
+node* add (node *tree,int x)
 {
 	if(tree == NULL)
 	{
@@ -118,62 +120,66 @@ int btree::del_min(node *tree)
 	return 0;
 }
 
-node* btree::MergeLists(node *headA, node* headB)
-{
-    if (headA == NULL) {
-        return headB;
-    } else if (headB == NULL) {
-        return headA;
-    } else if (headA->data <= headB->data) {
-        headA->next = MergeLists(headA->next, headB);
-        return headA;
-    } else {
-        headB->next = MergeLists(headA, headB->next);
-        return headB;
-    }
+/* Function to merge given two binary trees*/
+node* MergeTrees(node *headA, node *headB) 
+{ 
+    if (!headA) 
+        return headB; 
+    if (!headB) 
+        return headA; 
+    headA->data += headB->data; 
+    headA->left = MergeTrees(headA->left, headB->left); 
+    headA->right = MergeTrees(headA->right, headB->right); 
+    return headA; 
 }
 
-/*
- * 	You should strongly prefer this to strlen(str.c_str()) 
- * 	for the following reasons:
- *	Clarity: The length() (or size() ) member functions
- *	unambiguously give back the length of the string.
- *	Efficiency: length() and size() run in time O(1), 
- *	while strlen(str.c_str()) will take Θ(n) time 
- *	to find the end of the string.
- */
-
-int main() 
+int main(int argc, char ** argv)
 {	
 	system("clear");
 
-	int user_input;
-	std::cout << "Height: ";
-	std::cin >> user_input;
+    std::string input_data;
+    std::cout << "input_data: " ;
+    std::cin >> input_data;
 
-	for (int i=0; i<strlen(str.c_str(user_input)); i++)
+    size_t input_len = input_data.length();
+
+    int *trees_elem_list = new int[input_len];
+
+    for (size_t i = 0; i < input_len; ++i) {
+        trees_elem_list[i] = input_data[i] - '0';
+    }
+
+    std::cout << std::endl << "Number of Trees: " << input_len << std::endl << std::endl;
+    for (size_t i = 0; i < input_len; ++i) {
+            std::cout << i + 1 << ". tree depth : " << trees_elem_list[i] << std::endl;
+    }
+
+    std::cout << std::endl << "### Initializing..." << std::endl << std::endl;
+
+
+	for (size_t i = 0; i < input_len; ++i)
 	{	
 		if (root == NULL) 
 		{ 
 			btree *tree = new btree();
-			for (int j=0; j<atoi(user_input); j++)
+			for (int j=0; j < trees_elem_list[i]; ++j)
 			{
-				int x = (rand() % 100) + 1;
-				tree = add(tree,x);
-				if( height(tree) == atoi(user_input) ) break;
+				int data = randomGenerator(1,500);
+				tree = add(tree, data);
+				if( height(tree) == trees_elem_list[i] ) break;
 			}
 			headA = root;
 		} else 
 		{
 			btree *tree = new btree();
-			for (int j=0; j<atoi(user_input); j++)
+			for (int j=0; j < trees_elem_list[i]; ++j)
 			{
-				int x = (rand() % 100) + 1;
-				tree = add(tree,x);
-				if( height(tree) == atoi(user_input) ) break;
+				int data = randomGenerator(1,500);
+				tree = add(tree, data);
+				if( height(tree) == trees_elem_list[i] ) break;
 			}
 			headB = root;
-			MergeLists(headA, headB);
+			MergeTrees(headA, headB);
 			headA = NULL;
 			headB = NULL;
 			root = NULL;

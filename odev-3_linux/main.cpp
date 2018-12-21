@@ -8,31 +8,81 @@
 * @author Oguzhan Ince oguzhan.ince@ogr.sakarya.edu.tr
 **/
 
-#include <manage.hpp>
-#include <implement.hpp>
-#include <TreeException.hpp>
-#include <BinarySearchTree.hpp>
+#include <string>
 
-int main(int argc, char ** argv) 
-{
-	system("clear"); // Terminal ekranini temizle.
+#include <binary_search_tree.hpp>
+#include <random_data.hpp>
 
-/** 
- * kullanıcıdan bir sayı isteyecektir. sayının basamak uzunluğu çok fazla olabilir.
- * her basamaktaki değeri bir ağacın yüksekliği kabul edip, bu yüksekliğe gelene kadar
- * rastgele sayılardan meydana gelen ikili arama ağaçları oluşturacaktır. Oluşan bu ağaçlar 
- * yükseklik değerleri baz alınarak bir ikili arama ağacında tutulacaktır.
-**/
 
-    // Implement Statements from implement.hpp header file
-	Implement i;
-	i.BST_implement();
- 
- 	// Daha sonra menü ekrana gelmelidir.
-    // Menu Statements from manage.hpp header file
-	Manage m;
-	m.start();
 
-	~BinarySearchTree(); // destructor function !!!
-	// delete agac;
+int main(int argc, char ** argv) {
+
+    std::string input_data;
+    std::cout << "input_data: " ;
+    std::cin >> input_data;
+
+    size_t input_len = input_data.length();
+
+    int *trees_elem_list = new int[input_len];
+
+    for (size_t i = 0; i < input_len; ++i) {
+        trees_elem_list[i] = input_data[i] - '0';
+    }
+
+    std::cout << std::endl << "Number of Trees: " << input_len << std::endl << std::endl;
+    for (size_t i = 0; i < input_len; ++i) {
+            std::cout << i + 1 << ". tree depth : " << trees_elem_list[i] << std::endl;
+    }
+
+    std::cout << std::endl << "### Initializing..." << std::endl << std::endl;
+
+    BinarySearchTree *tree_list = new BinarySearchTree[input_len];
+
+    BinarySearchTree *tree = &tree_list[0];
+
+
+    for (size_t i = 0 ; i < input_len ;i++) {
+        if (i == 0) {
+             std::cout << "# ROOT TREE : ";
+        } else {
+            std::cout << "# " << i + 1 << ". TREE   : ";
+        }
+
+        for (int j = 0; j < trees_elem_list[i]; ++j) {
+            int data = randomGenerator(1,500);
+            tree_list[i].insert(data);
+            std::cout << " [" << data << "] ";
+        }
+
+        std::cout << std::endl;
+    }
+
+
+   std::cout << std::endl << "### Result" << std::endl << std::endl;
+
+
+    for (size_t i = 0 ; i < input_len ;i++) {
+        if (i == 0) {
+             std::cout << "# ROOT TREE";
+        } else {
+            std::cout << "# " << i + 1 << ". TREE";
+        }
+
+        std::cout  << std::endl << "# inorder  : ";
+        tree_list[i].inorder_print();
+
+        std::cout  << std::endl << "# postorder: ";
+        tree_list[i].postorder_print();
+
+        std::cout << std::endl << "# preorder : " ;
+        tree_list[i].preorder_print();
+
+        std::cout << std::endl << "-----------------------" << std::endl << std::endl;
+
+    }
+
+
+    for (size_t i = 0 ; i < input_len ;i++) {
+        tree_list[i].destroy_tree();
+    }
 }
