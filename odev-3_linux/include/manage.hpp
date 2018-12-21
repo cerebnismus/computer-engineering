@@ -47,17 +47,37 @@ public:
 			{
     			case 1:
    			    
-				i.agac->max_del();
-				break;
+    for (size_t i = 0 ; i < input_len ;i++) {
+        if (i == 0) {
+            tree_list[i].max() = nullptr;
+             std::cout << "# ROOT TREE";
+        } else {
+            tree_list[i].max() = nullptr;
+            std::cout << "# " << i + 1 << ". LEVEL TREE";
+        }
+        std::cout << std::endl << "# levelorder : " ;
+        tree_list[i].levelorder_print();
+    }				break;
 
     			case 2:
 				
 				i.agac->min_del();
+				    for (size_t i = 0 ; i < input_len ;i++) {
+        if (i == 0) {
+            tree_list[i].min() = nullptr;
+             std::cout << "# ROOT TREE";
+        } else {
+            tree_list[i].min() = nullptr;
+            std::cout << "# " << i + 1 << ". LEVEL TREE";
+        }
+        std::cout << std::endl << "# levelorder : " ;
+        tree_list[i].levelorder_print();
+    }
     			break;
 
     			case 3:
     			
-				i.agac->Levelorder();
+				//i.agac->Levelorder();
     			break;
 
     			case 4:
