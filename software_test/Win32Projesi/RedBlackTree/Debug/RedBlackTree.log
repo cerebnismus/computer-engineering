@@ -1,0 +1,5 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: Ara dizin (Debug\) başka bir projeden (RedBlackTree.vcxproj) paylaşılan dosyalar içeriyor. Bu, hatalı temizleme ve yeniden oluşturma davranışına neden olabilir.
+  Atlanıyor... (ilgili hiçbir değişiklik algılanmadı)
+  RedBlackTree.cpp
+  RedBlackTree.vcxproj -> C:\Users\oguzhanozgur\documents\visual studio 2017\Projects\Win32Project2\Debug\RedBlackTree_Project.exe
+  RedBlackTree.vcxproj -> C:\Users\oguzhanozgur\documents\visual studio 2017\Projects\Win32Project2\Debug\RedBlackTree_Project.pdb (Partial PDB)
