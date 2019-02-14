@@ -1,6 +1,9 @@
 # Computer Engineering
 ## Sakarya University
-### README.md
+
+[linux cli notes](https://github.com/oguzhanlarca/computer-engineering/blob/master/linux.md)
+[software test notes](https://github.com/oguzhanlarca/computer-engineering/blob/master/software_test/README.md)
+
 
 You can contribute this git repository or free to clon whatever:
 ```
