@@ -5,7 +5,7 @@
 * [software test notes](https://github.com/oguzhanlarca/computer-engineering/blob/master/software_test/README.md)
 
 
-You can contribute this git repository or free to clon whatever:
+You can contribute this git repository or free to clone whatever:
 ```
 git clone https://github.com/oguzhanlarca/computer-engineering.git
 ```
