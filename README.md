@@ -1,11 +1,16 @@
 # Computer Engineering
 ## Sakarya University
-### README.md
 
-You can contribute this git repository or free to clon whatever:
+* [linux cli notes](https://github.com/oguzhanlarca/computer-engineering/blob/master/linux.md)
+* [software test notes](https://github.com/oguzhanlarca/computer-engineering/blob/master/software_test/README.md)
+
+
+You can contribute this git repository or free to clone whatever:
 ```
-$ git clone https://github.com/oguzhanlarca/computer-engineering.git
+git clone https://github.com/oguzhanlarca/computer-engineering.git
 ```
 
 ## Authors
-* **Oguzhan Ince** - *Sakarya University* - [oguzhanlarca](https://github.com/oguzhanlarca)
+* **Oguzhan Ince** - *Savas Kaplan*
+- [oguzhanlarca](https://github.com/oguzhanlarca) - [coldrain](https://github.com/Coldrain)
+
