@@ -4,6 +4,9 @@
 ### useful cmd apps
 
 exa -> replacement for ls written in Rust.
+```
+exa -laBhxrumGSF --git --git-ignore --colour-scale
+```
 fuck -> its give you a right command for you
 How2 -> more colorful and readable than howdoi.
 howdoi -> for information about programming.
