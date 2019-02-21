@@ -11,6 +11,5 @@ git clone https://github.com/oguzhanlarca/computer-engineering.git
 ```
 
 ## Authors
-* **Oguzhan Ince** - *Savas Kaplan*
-- [oguzhanlarca](https://github.com/oguzhanlarca) - [coldrain](https://github.com/Coldrain)
+* **Oguzhan Ince** - [oguzhanlarca](https://github.com/oguzhanlarca)
 
