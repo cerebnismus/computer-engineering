@@ -1,0 +1,10 @@
+#ifndef HELPER_H
+#define HELPER_H
+
+#include <malloc.h>
+
+extern char **string_dizisi_olustur(size_t uzunluk, size_t tamponBoyutu);
+
+extern void string_dizisi_yok_et(char **dizi, size_t uzunluk);
+
+#endif //HELPER_H
