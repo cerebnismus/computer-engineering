@@ -4,6 +4,7 @@
 const url = require('url');
 const path = require('path');
 const fs = require('fs');
+// const detect = require('detect-port'); // https://www.npmjs.com/package/detect-port
 const mimeTypes = {
   "html": "text/html",
   "jpeg": "image/jpeg",
@@ -15,19 +16,26 @@ const mimeTypes = {
 
 // Setup basic express
 var express = require('express');
+var app = express();
+
 //Dependencies
 var ip = require('ip'); // https://github.com/indutny/node-ip
-var os = require('os');
-var colors = require('colors');
-var ifaces = os.networkInterfaces();
-var app = express();
-var server = require('http').createServer(app);
-var io = require('socket.io')(server);
-var port = process.env.PORT || 3000;
+var os = require('os'); // https://www.npmjs.com/package/os
+var ifaces = os.networkInterfaces(); // eth0 192.168.1.24
+var colors = require('colors'); // https://www.npmjs.com/package/colors
+var server = require('http').createServer(app); // https://www.w3schools.com/nodejs/met_http_createserver.asp
+var io = require('socket.io')(server); // https://socket.io/docs/internals/
+var port = process.env.PORT || 3000; // PORT=4444 node index.js ~> run with sudo for ports below 1024.
+// The process.env property returns an object containing the user environment.
 var session = require('express-session');  //"cookie-session" modülü tüm oturum bilgilerini istemcide saklar
 var logger = require('morgan');  // isteklerle ilgili logları konsola yazmak için
-var cookieParser = require('cookie-parser');
+var cookieParser = require('cookie-parser'); // https://www.npmjs.com/package/cookie-parser
 var bodyParser = require('body-parser');  //  get parameters from a request
+var nodemailer = require('nodemailer'); //  post parameters from a contact form
+var passport = require('passport') // http://www.passportjs.org/docs/configure/
+
+var uptime = process.uptime(); // fail!!!
+
 
 colors.setTheme({
   custom: ['red', 'underline'],
@@ -41,10 +49,10 @@ colors.setTheme({
   error: 'red'
 });
 
-console.log('Sakarya University.rainbow'); // OMG Rainbows !
-console.log('Computer Engineering'.trap); // Drops the bass
+console.log('Sakarya University'.trap); // OMG Rainbows !
+console.log('Computer Engineering'.rainbow); // Drops the bass
 console.log('Network Programming'.info);
-console.log('### auth: oguzhan.ince@ogr.sakarya.edu.tr\n'.info);   
+console.log('oguzhan.ince@ogr.sakarya.edu.tr\n'.error);   
 
 server.listen(port, () => {
   console.log(' ');
@@ -80,6 +88,40 @@ Object.keys(ifaces).forEach(function (ifname) {
 // Routing
 // Let’s refactor our route handler
 app.use(express.static(path.join(__dirname, 'public')));
+ 
+app.get('/contact', function(req, res){
+  res.render('contact');
+});
+
+app.post('/contact/send', function(req, res){
+  var transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+      user: 'dev.ops.34.26@gmail.com',
+      pass: 'Ybayv4jqs*'
+    }
+  });
+  var mailOptions = {
+    from: 'admin <dev.ops.34.26@gmail.com>',
+    to: 'oguzhan.ince@ogr.sakarya.edu.tr',
+    subject: 'Website Submission',
+    text: 'You have a submission with the following details... Name: '+req.body.name+'Email: '+req.body.email+ 'Message: '+req.body.message,
+    html: '<p>You have a submission with the following details...</p><ul><li>Name: '+req.body.name+'</li><li>Email: '+req.body.email+'</li><li>Message: '+req.body.message+'</li> </ul>'
+  };
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error){
+      console.log(error);
+      res.redirect('/');
+    } else if(typeof res.body.name == 'undefined'){
+      console.log(error);
+      res.redirect('/');
+    }
+    else {
+      console.log('Message Sent: '+info.response);
+      res.redirect('/');
+    }
+  })
+});
 
 // Chatroom
 var numUsers = 0;

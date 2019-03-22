@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>SAU | Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap.css">
     <!-- Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap.css">
@@ -33,11 +32,9 @@
   </head>
   <body>  
       <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0">
-          <a class="navbar-brand col-sm-0 col-md-2 mr-0" href="index.html"> < Back </a>
-
+          <a class="navbar-brand col-sm-0 col-md-2 mr-0" href="index.html"> SAU - Internet Relay Chat </a>
           <form class="form-inline my-2 my-lg-0">
-            <!--  <input class="form-control mr-sm-3" type="text" placeholder="Search" aria-label="Search">
-            -->   <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success mr-sm-3 my-3 my-sm-2" type="submit">Search</button>
           </form>
         </nav>
@@ -54,66 +51,60 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">
+                      <a class="nav-link" href="chat.html">
                         <span data-feather="users"></span>
-                        Users
+                        App Chat
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">
+                      <a class="nav-link" href="server.html">
                         <span data-feather="bar-chart-2"></span>
-                        Analytics
+                        App Server
                       </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      <span data-feather="file"></span>
-                      Databases
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      <span data-feather="layers"></span>
-                      Reports
-                    </a>
+                      <a class="nav-link" href="https://github.com/oguzhanlarca">
+                        <span data-feather="database"></span>
+                        Fork me Github
+                      </a>
                   </li>
                 </ul>
         
                 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                  <span>Custom Reports</span>
+                  <span>Tools & Reports</span>
                   <a class="d-flex align-items-center text-muted" href="#add-new-item">
                     <span data-feather="plus-circle"></span>
                   </a>
                 </h6>
                 <ul class="nav flex-column mb-2">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/doc/stats.pdf">
+                        <span data-feather="file"></span>
+                        Server Status
+                      </a>
+                    </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#iptables.pdf">
-                      <span data-feather="file-text"></span>
-                      Firewall Logs
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#sysinfo.pdf">
-                      <span data-feather="file-text"></span>
+                    <a class="nav-link" href="/doc/sysinfo.pdf">
+                      <span data-feather="bar-chart"></span>
                       System Information
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#analytics.pdf">
+                    <a class="nav-link" href="/doc/analytics.pdf">
                       <span data-feather="file-text"></span>
                       Social Analytics
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#stats.pdf">
-                      <span data-feather="file-text"></span>
-                      Server Status
+                    <a class="nav-link" href="/doc/test.pdf">
+                      <span data-feather="database"></span>
+                      Software Unit Test
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#stats.pdf">
-                      <span data-feather="file-text"></span>
-                      Software Unit Test
+                    <a class="nav-link" href="/doc/iptables.pdf">
+                      <span data-feather="layers"></span>
+                      Firewall Logs
                     </a>
                   </li>
                 </ul>
@@ -144,10 +135,10 @@
                         </tr>
                         <tr>
                           <td>1,002</td>
-                          <td>Revm</td>
-                          <td>Sinan Emre</td>
-                          <td>Baran</td>
-                          <td>sinanemre@gmail.com</td>
+                          <td>Femin</td>
+                          <td>Esin</td>
+                          <td>Gokdag</td>
+                          <td>esin_gokdag@hotmail.com</td>
                         </tr>
                         <tr>
                           <td>1,003</td>
@@ -164,19 +155,18 @@
                 <h2>Daily Active Users</h2>
                 <div class="btn-toolbar mb-2 mb-md-0">
                   <div class="btn-group mr-2">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                      <span data-feather="share"></span> Share</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                        <span data-feather="download"></span> Export</button>
                   </div>
                   <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
                     <span data-feather="calendar"></span>
                     This week
                   </button>
                 </div>
-
               </div>
-        
               <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-      
             </main>
           </div>
         </div>
@@ -186,9 +176,9 @@
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
                 <script src="/js/dashboard.js"></script>
- 
-                <form class="form-signin">
-                  <h7><p class="mt-2 mb-2 fixed text-muted">&copy; 2019 | SAU - Computer Engine. &copy; 2019 | SAU - Computer Engineering</p></h7>
-                </form>
+        <!-- Signature -->
+        <form class="form-signin">
+          <p class="text-center mt-5 mb-3 text-muted">&copy; 2019 | SAU - Computer Engineering</p>
+        </form>
   </body>
 </html>

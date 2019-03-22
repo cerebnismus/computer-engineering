@@ -229,7 +229,7 @@ $(function() {
   socket.on('login', (data) => {
     connected = true;
     // Display the welcome messages
-    var message = "Sakarya Universitesi – Bilgisayar Muhendisligi - Ag Programlama Odevi";
+    var message = "Welcome to SAU - Internet Relay Chat Application";
     log(message, {
       prepend: true
     });

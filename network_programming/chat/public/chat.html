@@ -5,73 +5,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>SAU | Chat</title>
-    <!-- Bootstrap core CSS -->
+    <!-- Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/bootstrap.css">
     <link href="/css/offcanvas.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <link href="/css/dashboard.css" rel="stylesheet"> 
+    <!-- Main Script Source -->
     <script src="main.js"></script>
-
     <style>
-        .bd-placeholder-img {
-          font-size: 1.125rem;
-          text-anchor: middle;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
         }
-  
-        @media (min-width: 768px) {
-          .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-          }
-        }
-      </style>
-      <!--  -->
+      }
+    </style>
   </head>
   <body>  
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">
-        <a class="navbar-brand" href="index.html"> < Back </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="true" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="dashboard.html">Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="chat.html">Chat<span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
-          <ul class="navbar-nav fixed">
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Login</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav fixed">
-            <li class="nav-item">
-              <a class="nav-link disabled" href="helper.html" tabindex="-1" aria-disabled="true">Help</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav fixed">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#chat.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">En</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="#trchat.html">Tr</a>
-                <a class="dropdown-item" href="#enchat.html">En</a>
-              </div>
-            </li>
-          </ul>
+      <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0">
+          <a class="navbar-brand col-sm-0 col-md-2 mr-0" href="dashboard.html"> SAU - Internet Relay Chat </a>
           <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-      </nav>
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success ml-sm-4 mr-sm-3 my-3 my-sm-2" type="submit">Search</button>
+          </form>
+        </nav>
 
-      <ul class="pages">
+      <div class="container-fluid">
+          <div class="row">
+            <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
+              <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="chat.html">
+                      <span data-feather="home"></span>
+                      All Chat <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="profile.html">
+                        <span data-feather="users"></span>
+                        Profile
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="users.html">
+                        <span data-feather="layers"></span>
+                        Users & Groups
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="dashboard.html">
+                        <span data-feather="bar-chart-2"></span>
+                        Dashboard
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link text-white" href="https://github.com/oguzhanlarca">
+                        <span data-feather="database"></span>
+                        Fork me on Github
+                      </a>
+                  </li>
+                </ul>
+        
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                  <span>Tools & Reports</span>
+                  <a class="d-flex align-items-center text-muted" href="#add-new-item">
+                    <span data-feather="plus-circle"></span>
+                  </a>
+                </h6>
+                <ul class="nav flex-column mb-2">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#sysinfo.pdf">
+                      <span data-feather="file-text"></span>
+                      Import Data
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#analytics.pdf">
+                      <span data-feather="file-text"></span>
+                      Export Data
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#iptables.pdf">
+                      <span data-feather="file-text"></span>
+                      Chat History
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#iptables.pdf">
+                      <span data-feather="file-text"></span>
+                      Clear History
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#stats.pdf">
+                      <span data-feather="file-text"></span>
+                      Software Unit Test
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+          <ul class="pages">
           <li class="chat page">
             <div class="chatArea">
               <ul class="messages"></ul>
@@ -80,22 +125,28 @@
           </li>
           <li class="login page">
             <div class="form">
-              <h3 class="title">What's your nickname?</h3>
+              <h3 class="title">What's your username?</h3>
               <input class="usernameInput" type="text" maxlength="14" />
             </div>
           </li>
-        </ul>
-      
+          </ul>
+
+      </main>
+    </div>
+  </div>
+        <!-- Script Source for dashboard -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script>window.jQuery || document.write('<script src="/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+        <script src="/js/dashboard.js"></script>
+        <!-- Script Source for chat -->
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="/js/socket.io.js"></script>
-        <script src="/main.js"></script>
-
+        <script src="main.js"></script>
+        <!-- Signature -->
+        <form class="form-signin">
+          <p class="bg-white text-center mt-5 mb-3 text-muted">&copy; 2019 | SAU - Computer Engineering</p>
+        </form> 
   </body>
-  
-  <body class="text-center">
-    <form class="form-signin">
-      <h7><p class="bg-dark mt-0 mb-0 fixed text-muted">&copy; 2019 | SAU - Computer Engineering</p></h7>
-    </form>
-  </body>
-
 </html>
