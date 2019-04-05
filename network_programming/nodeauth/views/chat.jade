@@ -1,0 +1,25 @@
+extends layout
+
+block content
+ ul.pages
+    li.page
+     .form
+      h3.title What's your nickname?
+      input.usernameInput(type='text', placeholder='write here..' maxlength='18', size='35')
+      input(type='submit', value='Submit')
+
+  #mainWrapper
+    p 
+    br
+    br
+    br
+    br
+    h3 SAU Chat.IO
+    #chatWrapper
+      #chatWindow
+      form#messageForm
+        input#message(type='text', size='35', placeholder='say some..')
+        input(type='submit', value='Submit')
+    #userWrapper
+      #users
+
