@@ -1,3 +1,4 @@
+// GNU General Public License v3.0
 // 'use strict';
 // const http = require('http');
 // const url = require('url');
@@ -5,16 +6,7 @@
 // const fs = require('fs');
 // const detect = require('detect-port'); // https://www.npmjs.com/package/detect-port
 
-const mimeTypes = {
-  "html": "text/html",
-  "jpeg": "image/jpeg",
-  "jpg": "image/jpg",
-  "png": "image/png",
-  "js": "text/javascript",
-  "css": "text/css"
-};
-
-//Dependencies
+// Dependencies & Setup basic express server
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -59,10 +51,17 @@ colors.setTheme({
   error: 'red'
 });
 
-console.log('Sakarya University'.trap); // OMG Rainbows !
-console.log('Computer Engineering'.rainbow); // Drops the bass
-console.log('Network Programming'.info);
-console.log('oguzhan.ince@ogr.sakarya.edu.tr\n'.error);   
+const mimeTypes = {
+  "html": "text/html",
+  "jpeg": "image/jpeg",
+  "jpg": "image/jpg",
+  "png": "image/png",
+  "js": "text/javascript",
+  "css": "text/css"
+};
+
+console.log('Sakarya University - Computer Engineering'.verbose); // OMG Rainbows !
+console.log('Author: '.verbose + 'oguzhan.ince@ogr.sakarya.edu.tr\n'.info);   
 
 server.listen(port, () => {
   console.log(' ');
@@ -93,6 +92,16 @@ Object.keys(ifaces).forEach(function (ifname) {
     }
     ++alias;
   });
+});
+
+// Mongoose Database Connetion
+mongoose.connect("mongodb://localhost:27017/test", { useNewUrlParser: true }, function(err, db){
+  if (err) {
+    console.log(err);
+  }else {
+    console.log('Mongoose is running\n');
+    db.close(); // if it goes wrong, comment this line
+  }
 });
 
 // view engine setup

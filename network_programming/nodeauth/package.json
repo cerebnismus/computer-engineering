@@ -1,10 +1,11 @@
 {
   "name": "nodeauth",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "A simple chat client using socket.io",
+  "main": "app.js",
+  "author": "Oguzhan Ince",
   "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
+  "license": "GNU General Public License v3.0",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "~1.13.2",
@@ -30,5 +31,8 @@
     "pug": "*",
     "serve-favicon": "~2.3.0",
     "socket.io": "^2.2.0"
+  },
+  "scripts": {
+    "start": "node app.js"
   }
 }

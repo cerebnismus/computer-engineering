@@ -70,7 +70,7 @@ ul.error li{
 /* Login Page */
 
 .login.page {
-  background-color: #000;
+  background-color: rgb(255, 255, 255);
 }
 
 .login.page .form {
@@ -86,7 +86,7 @@ ul.error li{
 .login.page .form .usernameInput {
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #000;
   outline: none;
   padding-bottom: 15px;
   text-align: center;
@@ -103,21 +103,21 @@ ul.error li{
 }
 
 .login.page .title, .login.page .usernameInput {
-  color: #fff;
+  color: #000;
   font-weight: 100;
 }
 
 /* Chat page */
 
 .chat.page {
-  background-color: #000;
+  background-color: #fff;
   display: none;
 }
 
 /* Font */
 
 .messages {
-  color: #fff;
+  color: #000;
   font-size: 100%;
   text-align: right;
 }

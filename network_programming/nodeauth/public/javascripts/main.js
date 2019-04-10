@@ -26,11 +26,11 @@ $(function() {
   var socket = io();
 
   const addParticipantsMessage = (data) => {
-    var message = '';
+    var message = 'Hello ' + username;
     if (data.numUsers === 1) {
-      message += "there's 1 participant !";
+      message += ", there's 1 participant in this group!";
     } else {
-      message += "there are " + data.numUsers + " participants";
+      message += ", there are " + data.numUsers + " participants in this group!";
     }
     log(message);
   }
@@ -243,19 +243,20 @@ $(function() {
 
   // Whenever the server emits 'user joined', log it in the chat body
   socket.on('user joined', (data) => {
-    log(data.username + ' joined');
+    log(data.username + ' has joined the room');
     addParticipantsMessage(data);
   });
 
   // Whenever the server emits 'user left', log it in the chat body
   socket.on('user left', (data) => {
-    log(data.username + ' left');
+    log(data.username + ' has left the room');
     addParticipantsMessage(data);
     removeChatTyping(data);
   });
 
   // Whenever the server emits 'typing', show the typing message
   socket.on('typing', (data) => {
+    log(data.username + ' is typing');
     addChatTyping(data);
   });
 
