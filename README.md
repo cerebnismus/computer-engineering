@@ -1,9 +1,10 @@
-## Sakarya University - Computer Engineering
+### Notes
+* [linux basics](https://github.com/oguzhanlarca/computer-engineering/blob/master/linux-basics.md)
+* [linux commands](https://github.com/oguzhanlarca/computer-engineering/blob/master/linux-commands.md)
+* [linux kernel](https://github.com/oguzhanlarca/computer-engineering/blob/master/linux-kernel.md)
+* [C++ gtest on osx](https://github.com/oguzhanlarca/computer-engineering/blob/master/software_test/README.md)
 
-* [linux cli notes](https://github.com/oguzhanlarca/computer-engineering/blob/master/linux.md)
-* [software test notes](https://github.com/oguzhanlarca/computer-engineering/blob/master/software_test/README.md)
-
-## Some of my programs on github
+### School projects
 <code>https://github.com/oguzhanlarca/sau-shell</code><br> 
 <code>https://github.com/oguzhanlarca/sau-socket</code><br> 
 <code>https://github.com/oguzhanlarca/whoami</code><br> 
