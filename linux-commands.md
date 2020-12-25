@@ -23,8 +23,6 @@ cheatsh -> same job, more awesome and more harder than others..
 Tldr -> Simplified and community-driven man pages.
 https://www.shortcutfoo.com/ -> like academy !
 
-For more https://github.com/oguzhanlarca/awesome-cli-apps
-
 ### Connect Wifi -> Arch Linux & Mac OS
 
 Arch 
