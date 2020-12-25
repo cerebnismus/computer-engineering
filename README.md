@@ -1,6 +1,5 @@
 ### Notes
-* [linux fundamental](https://github.com/oguzhanlarca/computer-engineering/blob/master/linux-basics.md)
-* [linux advanced](https://github.com/oguzhanlarca/computer-engineering/blob/master/linux-commands.md)
+* [linux commands](https://github.com/oguzhanlarca/computer-engineering/blob/master/linux-commands.md)
 * [C++ gtest on osx](https://github.com/oguzhanlarca/computer-engineering/blob/master/software_test/README.md)
 
 ### Projects
