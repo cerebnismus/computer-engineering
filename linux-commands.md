@@ -1,4 +1,10 @@
 # Linux Commands
+
+### *nix-like
+```
+sudo nmap -sn --privileged 192.168.1.0/24
+```
+for more: https://nmap.org/book/man-examples.html
 ### tcpdump
 ```
 sudo tcpdump src 10.254.124.2 and dst 10.254.63.53 and dst port -w capture_file_netas
