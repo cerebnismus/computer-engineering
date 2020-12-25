@@ -1,6 +1,6 @@
 # Linux Commands
 
-exa -> replacement for ls written in Rust.
+### exa -> replacement for ls written in Rust.
 ```
 exa -laBhxrumGSF --git --git-ignore --colour-scale
 ```
@@ -13,7 +13,7 @@ https://www.shortcutfoo.com/ -> like academy !
 
 For more https://github.com/oguzhanlarca/awesome-cli-apps
 
-### Connect Wifi ->
+### Connect Wifi -> Arch Linux & Mac OS
 
 Arch 
 ```
@@ -23,11 +23,9 @@ Mac
 ```
 osx-wifi-cli --help
 ```
-
-### Mac learn Wifi Pass ->
-
+Get Wifi Pass:
 ```
-security find-generic-password -D "AirPort network password" -a FSOCIETY -g
+security find-generic-password -D "AirPort network password" -a SSID_NAME -g
 ```
 
 ### ssh
@@ -35,6 +33,8 @@ security find-generic-password -D "AirPort network password" -a FSOCIETY -g
 ```
 systemctl enable sshd.service
 systemctl start sshd.service
+ssh root@192.168.2.1
+ssh pi@192.168.1.8
 ```
 
 ### i3
