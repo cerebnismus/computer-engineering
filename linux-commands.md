@@ -4,9 +4,8 @@
 sudo tcpdump src 10.254.124.2 and dst 10.254.63.53 and dst port -w capture_file_netas
 tcpdump -r capture_netas
 ```
-```
-https://danielmiessler.com/study/tcpdump/
-```
+for more: https://danielmiessler.com/study/tcpdump/
+
 ### exa -> replacement for ls written in Rust.
 ```
 exa -laBhxrumGSF --git --git-ignore --colour-scale
