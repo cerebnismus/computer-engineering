@@ -1,7 +1,4 @@
 # Linux Commands
-————————————
-
-### useful cmd apps
 
 exa -> replacement for ls written in Rust.
 ```
